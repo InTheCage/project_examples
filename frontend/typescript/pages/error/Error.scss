@@ -1,0 +1,78 @@
+@import '../../styles/variable.scss';
+
+.error-wrap {
+	margin-top: 10vh !important;
+	margin-bottom: 10vh !important;
+	min-height: 47vh;
+	display: flex;
+	align-items: center;
+	position: relative;
+	color: $white;
+	background: linear-gradient(
+		-35.21deg,
+		#ff7701 12.36%,
+		#d46946 18.05%,
+		#b05e7f 23.37%,
+		#9656a8 27.89%,
+		#8651c2 31.43%,
+		#804fcb 33.57%,
+		#794ece 36%,
+		#674ad5 39.44%,
+		#4844e2 43.48%,
+		#1e3cf3 47.95%,
+		#0036ff 50.75%,
+		#00aed3 73.26%,
+		#00d478 94.35%
+	);
+	@media #{$small-only} {
+		margin: 0 !important;
+		min-height: auto;
+		flex-direction: column;
+	}
+	.error-left {
+		width: 26%;
+		text-align: right;
+		padding: 3% 5% 8% 0;
+		@media #{$small-only} {
+			width: 100%;
+			padding: 3% 2% 0;
+			text-align: center;
+		}
+	}
+	.error-right {
+		width: 74%;
+		padding: 3% 3% 6% 0;
+		@media #{$small-only} {
+			width: 100%;
+			padding: 3% 2%;
+			text-align: center;
+		}
+	}
+	.error-title {
+		font-family: $font-secondary;
+		font-size: 2.5rem;
+		line-height: 1.3;
+		font-weight: 700;
+		letter-spacing: 0.0625rem;
+		margin: 0 0 1.25rem;
+		@media #{$small-only} {
+			font-size: 1.875rem;
+		}
+	}
+	.error-subtitle {
+		font-family: $font-secondary;
+		font-size: 1.875rem;
+		line-height: 1.35;
+		font-weight: bold;
+		letter-spacing: 0.0313rem;
+		color: $white;
+		@media #{$small-only} {
+			font-size: 1.5rem;
+			margin-bottom: 2.4rem;
+		}
+	}
+	.icon-404 {
+		width: 6.95rem;
+		height: 6.95rem;
+	}
+}

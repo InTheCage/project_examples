@@ -1,0 +1,215 @@
+@import '../../styles/variable.scss';
+
+.form__section {
+	&.error {
+		input {
+		border-color: $error;
+		+ label {
+			color: $error !important;
+		}
+		}
+		.error-text {
+			display: block;
+		}
+	}
+	.g-recaptcha {
+		display: flex;
+		justify-content: center;
+		padding: 0 0 1rem;
+	}
+}
+
+.error-text {
+	color: $error;
+	font-size: 0.75rem;
+	margin-top: 0.25rem;
+	display: none;
+}
+
+.authorization {
+	@media #{$small-only} {
+		margin: 0 0.75rem 1.75rem;
+		min-height: auto;
+	}
+	.authorization-inner {
+		margin-top: 10vh !important;
+		margin-bottom: 10vh !important;
+		@media #{$small-only} {			
+			margin: 0 !important;
+		}
+	}
+	&__form {
+		border-radius: $rad10;
+		max-width: 28.75rem;
+		min-height: 47vh;
+		margin: 0 auto;
+		padding: 4.4rem 0 2rem;
+		@media #{$small-only} {
+			min-height: calc(100vh - 5.375rem - 2rem);
+			padding: 1.5rem 0.75rem 0.5rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	&__title {
+		font-family: $font-secondary;
+		font-weight: bold;
+		font-size: 1.875rem;
+		line-height: 1.3;
+		letter-spacing: 0.0313rem;
+		text-align: center;
+		@media #{$small-only} {
+			font-size: 1.375rem;
+		}
+	}
+	&__messages {
+		min-height: 2.1875rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0.5rem 0;
+	}
+  	.message-error {
+		font-size: 0.875rem;
+		color: $error;
+		text-align: center;
+		width: 100%;
+	}
+	.custom-message-error {
+		font-size: 0.875rem;
+		color: $error;
+		width: 100%;
+	}
+	&__content {
+		.phoneField {
+			margin: 2.1rem 0 1.7rem;
+		}
+		.button-link {
+			font-size: 0.875rem;
+			margin-top: 1rem;
+		}
+		.gray-light {
+			font-size: 0.875rem;
+		}		
+	}
+	.sigin-buttons {
+		text-align: center;
+		margin: 3.8rem 0 1.7rem;
+		@media #{$small-only} {
+			margin: 2.8rem 0 0;
+		}
+		.button-default {
+			min-width: 14.0625rem;
+		}
+	}
+	.select-horizontal__label {
+		font-size: 0.875rem;
+		letter-spacing: 0.0094rem;
+	}
+	.phoneField {
+		label {
+			font-size: 0.8125rem;
+			letter-spacing: 0.0094rem;
+			color: $secondary;
+			display: inline-block;
+			margin: 0 0 0.5rem;
+		}
+		.form__section {
+			margin-bottom: 1.7rem;
+		}
+	}
+	.react-tel-input {
+		.form-control {
+			font-family: $font-primary;
+			font-size: 0.875rem;
+			letter-spacing: 0.0094rem;
+			color: #000;
+			width: 100%;
+			height: 2.5rem;
+			line-height: 2.5rem;
+			border: 2px solid #e0e3ef;
+			border-radius: 0.625rem;
+			padding: 0 0.75rem 0 48px;
+		}
+		.flag-dropdown {
+			border: 2px solid #e0e3ef;
+			border-right-width: 1px;
+			border-radius: 0.625rem 0 0 0.625rem;
+		}
+		.selected-flag {
+            border-radius: 0.625rem 0 0 0.625rem;
+        }
+	}
+	.wrapper-sms {
+		.form__section {
+			margin: 0;
+			position: relative;
+			&:before {
+				content: "____";
+				display: none;
+				color: #b7bcd0;
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				margin-left: -8.75rem;
+				width: 18.125rem;
+				height: 3.75rem;
+				font-size: 3.4375rem;
+				letter-spacing: 1rem;
+			}
+			input {
+				font-family: $font-primary;
+				font-size: 1.375rem;
+				font-weight: bold;
+				letter-spacing: 0.0313rem;
+				color: $black;
+				width: 9.75rem;
+				height: 2.3125rem;
+				border: none;
+				border-radius: 0;
+				padding: 0;
+				margin: 0;
+				position: relative;
+				text-align: center;
+			}
+
+			input::-webkit-input-placeholder {
+				color: #b7bcd0;
+			}
+			input::-moz-placeholder {
+				color: #b7bcd0;
+			}
+			input:-moz-placeholder {
+				color: #b7bcd0;
+			}
+			input:-ms-input-placeholder {
+				color: #b7bcd0;
+			}
+			
+			input::placeholder {
+				color: #b7bcd0;
+			}
+
+		}
+		.error {
+			.form__section {
+				&:before {
+					color: $error;
+				}
+				input { 
+					color: $error;
+				}	
+			}
+		}
+		.fieldNameSmsCode-signin {
+			margin: 4rem 0 1.5rem;
+		}
+		input::-webkit-contacts-auto-fill-button, input::-webkit-credentials-auto-fill-button {
+			visibility: hidden;
+			pointer-events: none;
+			position: absolute;
+			right: 0;
+		}
+	}
+}

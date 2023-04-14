@@ -1,0 +1,9 @@
+<?php
+
+return [
+    'C_REST_CLIENT_ID' => 'local.123.321',
+    'C_REST_CLIENT_SECRET' => '',
+    //'C_REST_LOG_TYPE_DUMP' => true,
+    //'C_REST_LOGS_DIR' => __DIR__ . '/../../backend/runtime/logs/bitrix24/',
+    'C_REST_BLOCK_LOG' => true,
+];

@@ -1,0 +1,19 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  image: alpine
+  only:
+    - master
+  before_script:
+    - apk add --update openssh-client
+    - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+  script:
+    - ssh -t -o StrictHostKeyChecking=no $SSH_LOGIN@$SSH_HOST "cd '$PRJ_PATH'; git reset --hard; git pull $PRJ_GIT;echo 'OK'"
+after_script:
+    - ssh -t -o StrictHostKeyChecking=no $SSH_LOGIN@$SSH_HOST "cd '$PRJ_PATH'; chgrp -R nginx ./*"

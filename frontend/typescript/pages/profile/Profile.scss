@@ -1,0 +1,205 @@
+@import '../../styles/variable.scss';
+
+.profile-wrap {
+	margin-top: 10vh !important;
+	margin-bottom: 10vh !important;
+	min-height: 47vh;
+	@media #{$small-only} {			
+		margin: 0 !important;
+	}
+	.profile-header {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		padding: 2.3rem 2.8125rem 1.4rem 2.1875rem;
+		border-bottom: 1px solid #e0e3ef;
+		@media #{$small-only} {
+			flex-direction: column;
+			padding: 1.2rem 0.75rem;
+		}
+		&-left {
+			.profile-title {
+				font-family: $font-secondary;
+				font-size: 1.25rem;
+				font-weight: bold;
+				line-height: 1.35;
+				letter-spacing: 0.0313rem;
+				margin: 0 0 0.3rem;
+			}
+			.today {
+				font-size: 0.8125rem;
+				color: $gray;
+			}
+		}
+		&-right {
+			@media #{$small-only} {
+				order: -1;
+				margin-bottom: 1rem;
+			}
+			.button-exit {
+				@media #{$small-only} {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.profile-content {
+		display: flex;
+		flex-flow: row wrap;
+		padding: 2rem 2.8125rem 2rem 2.1875rem;
+		@media #{$small-only} {
+			flex-direction: column;
+			padding: 1.2rem 0.75rem;
+		}		
+		&-left {
+			width: 54%;
+			@media #{$small-only} {
+				width: 100%;
+			}	
+			.input-wrap {
+				display: flex;
+				flex-flow: row wrap;
+				.input-value {
+					max-width: calc(100% - 11rem);
+					@media #{$small-only} {
+						max-width: none;
+						width: 100%;
+					}	
+				}		
+			}
+		}
+		&-right {
+			width: 46%;
+			@media #{$small-only} {
+				width: 100%;
+			}	
+		}
+		.input-wrap {
+			font-size: 1.125rem;
+			margin: 0 0 1.9rem;
+			position: relative;
+			@media #{$small-only} {
+				font-size: 1rem;
+			}	
+			.input-label {
+				color: $gray;
+                width: 11rem;
+				display: inline-block;
+				@media #{$small-only} {
+					width: 100%;
+				}	
+			}
+			.input-value {
+				font-size: 1.125rem;
+				color: $primary;
+				@media #{$small-only} {
+					width: 100%;
+					font-size: 1rem;
+				}	
+				input {
+					font-family: $font-primary;
+					font-size: 1.125rem;
+					color: $primary;
+					@media #{$small-only} {
+						font-size: 1rem;
+					}	
+				}
+				&.input-value-email {
+					margin-top: 0.7rem;
+				}
+			}
+			.profile-email-form:not(.editing) {
+				.input-value-email {
+					font-size: 1.125rem;
+					color: $link-primary;
+					@media #{$small-only} {
+						margin-top: 0;
+						font-size: 1rem;
+					}	
+					.form__section {
+						margin: 0;
+					}
+					input {
+						color: $link-primary;
+						height: 2.5rem;
+						border: none;
+						border-radius: 0;
+						padding: 0;
+						@media #{$small-only} {
+							height: auto;
+						}	
+					}
+				}
+			}
+			.profile-email-form.editing {
+				.link-change {
+					.button-link {
+						color: $gray;
+						cursor: default;
+					}
+				}
+				.input-value-email {
+					.form__section {
+						margin: 0;
+					}
+					input {
+						font-size: 0.875rem;
+					}
+				}
+				.email-editor {
+					padding: 1.6rem 0 0 2.375rem;
+					@media #{$small-only} {
+						padding: 1rem 0 0 0;
+					}
+					button {
+						margin: 0 0.625rem 0 0;
+						@media #{$small-only} {
+							width: 100%;
+						}
+					}
+					.button-default {
+						min-width: 14.0625rem;
+						@media #{$small-only} {
+							min-width: auto;
+							margin-top: 1rem;
+						}
+					}
+				}
+			}
+		}
+		.link-change {
+			font-size: 0.8125rem;
+			color: $link-primary;
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			right: 0;
+			@media #{$small-only} {
+				top: 0.2rem;
+			}
+		}
+		.profile-note {
+			font-size: 0.875rem;
+			color: $gray;
+			margin-top: 1.3rem;
+			padding: 0 0 0 2.375rem;
+			position: relative;
+			&:before {
+				content: "!";
+				width: 1.25rem;
+				height: 1.25rem;
+				font-size: 0.9rem;
+				font-weight: 500;
+				color: $white;
+				background: $error;
+				border-radius: 50%;
+				position: absolute;
+				left: 0.35rem;
+				top: 0.15rem;
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+			}
+		}
+	}
+}

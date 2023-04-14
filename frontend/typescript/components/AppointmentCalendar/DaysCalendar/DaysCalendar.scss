@@ -1,0 +1,106 @@
+@import '../../../styles/variable.scss';
+
+.days-calendar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	background: #f0f4ff;
+	height: 2.25rem;
+	border-radius: 0.625rem;
+	margin-bottom: 1.2rem;
+	.days-calendar__content {
+		width: 90%;
+		display: flex;
+		overflow: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.checkbox {
+		&.checkbox-visible-type__button {
+			.checkbox__options {
+				display: flex;
+				flex-flow: row nowrap;
+			}
+		}
+	}
+	.select-horizontal__input[type='checkbox'],
+	.select-horizontal__input[type='radio'] {
+		& + label {
+			font-size: 0.75rem;
+			white-space: nowrap;
+			color: $black;
+			height: 2.24rem;
+			display: flex;
+			align-items: center;
+            justify-content: center;
+			border-radius: 0.625rem;
+			padding: 0 0.625rem;
+			margin: 0 0.3rem;
+			border: 1px transparent solid;
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.select-horizontal__input[type='checkbox']:checked,
+	.select-horizontal__input[type='radio']:checked {
+		& + label {
+			background: #fff;
+			color: $middle-select;
+			//font-weight: bold;
+			border-color: $middle-select;
+            //font-size: 0.875rem;
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.select-horizontal__input[type='checkbox'],
+	.select-horizontal__input[type='radio'] {
+		&:disabled {
+			& + label {
+				opacity: 0.5;
+			}
+		}
+	}
+	.days-calendar__button {
+		width: 1.875rem;
+		height: 100%;
+		background: transparent;
+		position: relative;
+		font-size: 0;
+		line-height: 0;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			width: 0.6rem;
+			height: 0.6rem;
+			margin-top: -0.3rem;
+			border-left: 2px #7a9dfb solid;
+			border-bottom: 2px #7a9dfb solid;
+		}
+		&:disabled {
+			&:before {
+				border-color: $link-primary-disabled;
+			}
+		}
+	}
+	.days-calendar__button.left {
+		&:before {
+			transform: rotate(45deg);
+			left: 50%;
+		}
+	}
+	.days-calendar__button.right {
+		&:before {
+			transform: rotate(225deg);
+			right: 50%;
+		}
+	}
+}

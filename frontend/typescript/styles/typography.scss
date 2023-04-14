@@ -1,0 +1,37 @@
+.text {
+	&-uppercase {
+		text-transform: uppercase;
+	}
+	&-lowercase {
+		text-transform: lowercase;
+	}
+	&-through {
+		text-decoration: line-through;
+	}
+	&-normal {
+		text-transform: none;
+	}
+	&-left {
+		text-align: left;
+	}
+	&-right {
+		text-align: right;
+	}
+	&-center {
+		text-align: center;
+	}
+	&-regular {
+		font-weight: 400;
+	}
+	&-bold {
+		font-weight: bold;
+	}
+	&-medium {
+		font-weight: 500;
+	}
+}
+
+.no-decoration,
+.no-decoration:hover {
+	text-decoration: none !important;
+}

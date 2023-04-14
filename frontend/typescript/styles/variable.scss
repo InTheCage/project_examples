@@ -1,0 +1,40 @@
+$small: '(min-width: 769px)';
+$medium: '(min-width: 1025px)';
+$large: '(min-width: 1201px)';
+$xlarge: '(min-width: 1441px)';
+$xxlarge: '(min-width: 1921px)';
+
+$small-only: '(max-width: 768px)';
+$medium-only: '(min-width: 769px) and (max-width: 1024px)';
+$large-only: '(min-width: 1025px) and (max-width: 1440px)';
+$xlarge-only: '(min-width: 1441px) and (max-width: 1920px)';
+
+$medium-down: '(max-width: 1024px)';
+$large-down: '(max-width: 1440px)';
+$xlarge-down: '(max-width: 1920px)';
+
+$retina: '(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)';
+
+$font-primary: 'Styrene A Web', Helvetica, Arial, sans-serif;
+$font-secondary: 'Gill Sans', sans-serif;
+
+$primary: #000;
+$secondary: #504f53;
+$link-primary: #003ef9;
+$link-primary-hover: #0130c0;
+$link-primary-disabled: #e0e3ef;
+$black: #000;
+$white: #fff;
+$gray: #838b99;
+$gray-light: #b7bcd0;
+$light: #f0f4ff;
+$light-select: #bfd1ff;
+$middle-select: #7a9dfb;
+
+$error: #e43255;
+
+$rad5: 0.3125rem;
+$rad10: 0.625rem;
+$rad15: 0.9375rem;
+$rad20: 1.25rem;
+$bg-blue:#003EF9;

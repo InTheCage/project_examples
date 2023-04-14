@@ -1,0 +1,42 @@
+@import '../../styles/variable.scss';
+
+.apps-page {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-image: url(../../static/images/splashBg.svg);
+	background-repeat: no-repeat;
+	background-position: 64% 0;
+	background-size: auto 100%;
+
+	@media (orientation: landscape) {
+		background-position: 0 30%;
+		background-size: 100% auto;
+	}
+}
+
+.splash-logo {
+	width: 12.5rem;
+	margin: 6vh 0 4vh;
+}
+
+.splash-picture {
+	width: 100%;
+	max-width: 23.44rem;
+	margin-bottom: 3.8vh;
+}
+
+.apps-page-links {
+	text-align: center;
+	font-size: 1.0625rem;
+	line-height: 1.5;
+	padding: 0 5%;
+
+	.app-icon {
+		margin: 6.2vh auto;
+		display: block;
+	}
+}

@@ -1,0 +1,211 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+*, :after, :before {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	overflow-y: scroll;
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	-webkit-text-decoration-skip: objects;
+	text-decoration-skip: objects;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, ruby, s, samp, section, small, span, source, strike, strong, sub, summary, sup, table, tbody, tfoot, thead, time, tr, th, td, tt, u, ul, var, video {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	outline: 0;
+	vertical-align: top;
+	font-weight: inherit;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, audio, canvas, command, datalist, embed, keygen, meter, output, progress, source, video, main {
+	display: block;
+}
+
+mark, rp, rt, ruby, summary, time {
+	display: inline;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0; 
+}
+
+caption, th, td {
+	font-weight: normal;
+}
+
+a:focus, input:focus, textarea:focus, select:focus {
+	outline: 0;
+}
+
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	outline: none;
+}
+
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+}
+
+b, strong {
+	font-weight: inherit;
+}
+
+b, strong {
+	font-weight: bolder;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+	font-family: sans-serif;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+label, input[type="button"], input[type="submit"], button {
+	cursor: pointer;
+}
+
+button, input {
+	overflow: visible;
+}
+
+button, select {
+	text-transform: none;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+fieldset {
+	padding: 0;
+}
+
+legend {
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+textarea {
+	overflow: auto;
+}
+
+[type="checkbox"], [type="radio"] {
+	padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+canvas {
+	display: inline-block;
+}
+
+template {
+	display: none;
+}
+
+[hidden] {
+	display: none;
+}
+
+img {
+	vertical-align: top;
+	max-width: 100%;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	box-shadow: none;
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	touch-action: manipulation;
+}

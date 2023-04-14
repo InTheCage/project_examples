@@ -1,0 +1,161 @@
+@import '../../../styles/variable.scss';
+// каждый элемент input можемт быть disabled и родительский div иметь класс disabled
+
+.select-horizontal__input[type='checkbox']:checked,
+.select-horizontal__input[type='checkbox']:not(:checked),
+.select-horizontal__input[type='radio']:not(:checked),
+.select-horizontal__input[type='radio']:checked {
+	display: none;
+	& + label {
+        position: relative;
+		cursor: pointer;
+		display: flex;
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 1.25rem;
+			min-width: 1.25rem;
+			height: 1.25rem;
+			margin: 0 0.8rem 0 0;
+			border-width: 2px;
+			border-style: solid;
+			border-color: #e0e3ef;
+            border-radius: 5px;
+			transition: 0.2s all linear;
+			background: $white;
+		}
+        &:after {
+            transition: 0.2s all linear;
+        }
+	}
+}
+
+.select-horizontal__input[type='checkbox']:checked,
+.select-horizontal__input[type='radio']:checked {
+	display: none;
+	& + label {
+		&:before {
+			border-color: #7a9dfb;
+		}
+	}
+}	
+
+.select-horizontal__input[type='radio']:not(:checked),
+.select-horizontal__input[type='radio']:checked {
+	& + label {
+        &:before {
+            border-radius: 50%;
+        }
+    }
+     
+}
+
+.select-horizontal__input[type='checkbox']:checked {
+	& + label {
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+            top: 0.05rem;
+            left: 0.2rem;
+			width: 0.9375rem;
+			height: 0.9375rem;
+			background: transparent url(../../../static/images/icons/check.svg) 0 0 no-repeat;
+			background-size: 0.9375rem;
+		}
+	}
+}
+
+.select-horizontal__input[type='radio']:checked {
+	& + label {
+		&:before {
+			border-width: 0.4286rem;
+            border-color: $link-primary;
+			transform: scale(1.0001);
+		}
+		&:after {
+            content: '';
+			position: absolute;
+			top: 0.4286rem;
+			left: 0.4286rem;
+			width: 0.4286rem;
+			height: 0.4286rem;
+			background: $white;
+			border-radius: 50%;
+		}
+	}
+}
+
+.checkbox-agreement {
+	.select-horizontal__input[type='checkbox']:checked,
+	.select-horizontal__input[type='checkbox']:not(:checked),
+	.select-horizontal__input[type='radio']:not(:checked),
+	.select-horizontal__input[type='radio']:checked {
+		display: none;
+		& + label {
+			font-size: 0.875rem;
+			&:before, &:after {
+				margin-top: 0.15rem;
+			}
+		}
+	}
+}
+
+.checkbox {
+    flex-wrap: wrap;
+
+    &-visible-type__special {
+		.checkbox__options {
+			display: flex;
+			flex-flow: row wrap;
+		}
+		.select-horizontal__input[type='checkbox'],
+		.select-horizontal__input[type='radio'] {
+			& + label {
+				font-size: 0.8125rem;
+				line-height: 1.3;
+				color: $primary;
+				background: $light;
+				margin: 0 0.5rem 0.625rem 0;
+				padding: 0.1rem 0.75rem 0.2rem;
+				height: 1.8125rem;
+				display: flex;
+				align-items: center;
+				border-radius: $rad15;
+				&:before, &:after {
+					display: none;
+				}
+			}
+		}
+		.select-horizontal__input[type='checkbox']:checked,
+		.select-horizontal__input[type='radio']:checked {
+			& + label {
+				background: $light-select;
+			}
+		}
+    }
+
+    &.checkbox-visible-type__button {
+        .checkbox__options {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    }
+}
+.select-horizontal__input[type='checkbox']:disabled {
+	& + label {
+		color: $gray-light;
+		&:before {
+			border-color: $link-primary-disabled;
+		}
+	}
+}
+
+.select-horizontal__input[type='radio']:disabled {
+	& + label {
+		&:before {
+			border-color: $link-primary-disabled;
+		}
+	}
+}

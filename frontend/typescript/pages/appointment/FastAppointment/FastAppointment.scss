@@ -1,0 +1,162 @@
+@import '../../../styles/variable.scss';
+
+.fast-appointment {
+	padding: 0;
+	@media #{$small-only} {
+		box-shadow: none !important;
+	}
+    &__form-title {
+        font-family: $font-secondary;
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.35;
+        letter-spacing: 0.0313rem;
+        padding: 2.5rem 2.25rem 0.3rem;
+		@media #{$small-only} {
+			font-size: 1.125rem;
+			padding: 1.5rem 0 0;
+		}
+    }
+	&-form {
+		display: flex;
+        padding: 2.25rem 2.25rem 3.75rem;
+		@media #{$small-only} {
+			flex-direction: column;
+			padding: 1.1rem 0 0;
+		}
+        .checkbox-visible-type__default {
+            font-size: 0.875rem;
+            margin: -0.9rem 0 0;
+        }
+		.form__section {
+			@media #{$small-only} {
+				margin-bottom: 1.9rem;
+			}
+		}
+	}
+
+	&__content-left {
+		width: 52%;
+		padding-right: 1.5rem;
+		@media #{$small-only} {
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	&__content-right {
+		width: 48%;
+		@media #{$small-only} {
+			width: 100%;
+		}
+        .checkbox-visible-type__default {
+            margin: 0 0 1.55rem;
+            .form__group-row {
+                margin: 0 0 1rem;
+            }
+        }
+        .checkbox-visible-type__special {
+            margin: 0 0 1.55rem;
+			@media #{$small-only} {
+				margin: 0 0 0.8rem;
+			}
+        }
+	}
+
+	&__gradient {
+		position: relative;
+		padding: 2.5rem 1.875rem 2.8rem;
+		@media #{$small-only} {
+			padding: 2.15rem 0.75rem 2.6rem;
+		}
+		* {
+			position: relative;
+		}
+		p {
+			max-width: 75%;
+			@media #{$small-only} {
+				max-width: none
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				125.21deg,
+				#ff7701 12.36%,
+				#d46946 18.05%,
+				#b05e7f 23.37%,
+				#9656a8 27.89%,
+				#8651c2 31.43%,
+				#804fcb 33.57%,
+				#794ece 36%,
+				#674ad5 39.44%,
+				#4844e2 43.48%,
+				#1e3cf3 47.95%,
+				#0036ff 50.75%,
+				#00aed3 73.26%,
+				#00d478 94.35%
+			);
+			transform: rotate(-180deg);
+			border-bottom-left-radius: $rad10;
+			border-bottom-right-radius: $rad10;
+			@media #{$small-only} {
+				border-radius: $rad20;
+			}
+		}
+	}
+	&__title {
+		font-family: $font-secondary;
+		font-size: 1.625rem;
+		font-weight: bold;
+		line-height: 1.35;
+		letter-spacing: 0.0313rem;
+		color: $white;
+		@media #{$small-only} {
+			font-size: 1.5rem;
+			letter-spacing: 0.0313rem;
+			text-align: center;
+		}
+	}
+	.success-content.fast-appointment__gradient {
+		color: $white;
+		font-weight: bold;
+		text-align: center;
+		min-height: 53.4vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media #{$small-only} {
+			min-height: auto;
+			padding: 2.15rem 0.5rem 0.9rem;
+		}
+		&:before {
+			border-radius: $rad10;
+			@media #{$small-only} {
+				border-radius: $rad20;
+			}
+		}
+		p {
+			margin: 0 auto 4.7rem;
+			max-width: 30.25rem;
+			@media #{$small-only} {
+				margin: 0 auto 1.1rem;
+				max-width: none;
+			}
+		}
+		.fast-appointment__title {
+			p {
+				max-width: 20.5625rem;
+				margin: 0 auto 2.1rem;
+				@media #{$small-only} {
+					font-size: 1.375rem;
+				}
+			}
+		}
+	}
+
+}

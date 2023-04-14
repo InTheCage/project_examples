@@ -1,0 +1,60 @@
+<?php
+
+$connectionClass = 'yii\db\Connection';
+
+return [
+    'components' => [
+        'smstraffic' => [
+            'class' => 'common\components\SmsTraffic',
+            'name' => 'SMS Traffic',
+            'code' => 'sms_traffic',
+            'username' => '',
+            'password' => '',
+            'token' => '',
+        ],
+        'twilio' => [
+            'class' => 'common\components\Twilio',
+            'name' => 'Twilio',
+            'code' => 'twilio',
+            'template_name' => 'Twilio WhatsApp Templates',
+            'template_code' => 'twilio_templates',
+            'api_sid' => '',
+            'api_access_token' => '',
+            'whatsapp_id' => '',
+            'token' => '',
+        ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'viewPath' => '@common/mail',
+            'useFileTransport' => true,
+        ],
+        'db' => [
+            'class' => $connectionClass,
+            'dsn' => 'mysql:host=localhost;dbname=b2c',
+            'username' => '',
+            'password' => '',
+            'charset' => 'utf8',
+        ],
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
+        ],
+        'navision' => [
+            'class' => $connectionClass,
+            'driverName' => 'sqlsrv',
+            'dsn' => 'sqlsrv:Server=127.0.0.1;Database=b2c_crm',
+            'username' => '',
+            'password' => '',
+            'charset' => 'utf8',
+        ],
+        'siebel' => [
+            'class' => $connectionClass,
+            'dsn' => 'oci:dbname=//127.0.0.1:1521/B2C_CRM',
+            'username' => '',
+            'password' => '',
+            'charset' => 'utf8',
+        ],
+    ],
+];

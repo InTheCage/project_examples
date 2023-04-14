@@ -1,0 +1,33 @@
+@import '../../../styles/variable.scss';
+
+.input-phone {
+    label {
+        font-size: 0.8125rem;
+        letter-spacing: 0.0094rem;
+        color: $secondary;
+        display: inline-block;
+        margin: 0 0 0.5rem 0.75rem;
+    }
+    .react-tel-input {
+		.form-control {
+			font-family: $font-primary;
+			font-size: 0.875rem;
+			letter-spacing: 0.0094rem;
+			color: #000;
+			width: 100%;
+			height: 2.5rem;
+			line-height: 2.5rem;
+			border: 2px solid #e0e3ef;
+			border-radius: 0.625rem;
+			padding: 0 0.75rem 0 48px;
+		}
+		.flag-dropdown {
+			border: 2px solid #e0e3ef;
+			border-right-width: 1px;
+            border-radius: 0.625rem 0 0 0.625rem;
+		}
+        .selected-flag {
+            border-radius: 0.625rem 0 0 0.625rem;
+        }
+	}
+}

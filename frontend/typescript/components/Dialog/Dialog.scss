@@ -1,0 +1,101 @@
+@import '../../styles/variable.scss';
+
+.dialog {
+	background: $white;
+	border-radius: $rad10;
+	padding: 1.25rem;
+	width: 35rem;
+	position: relative;
+	&__overlay {
+		position: fixed;
+		min-height: 100vh;
+		min-width: 100vw;
+		overflow: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
+		-webkit-overflow-scrolling: touch;
+		background: rgba(17, 21, 35, 0.7);
+		backdrop-filter: blur(20px);
+	}
+	&__header {
+		margin: 2.3rem auto 1.5rem;
+		text-align: center;
+		.dialog-title {
+			font-family: $font-secondary;
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+	}
+	&__content {
+		margin: 0 auto 2.1rem;
+		font-size: 1.125rem;
+	}
+	&__footer {
+		width: 22rem;
+		margin: 0 auto 1.5rem;
+		text-align: center;
+		button {
+			width: 100%;
+			margin: 0 0 1rem;
+		}
+		.button-text {
+			width: auto;
+			font-size: 0.75rem;
+			font-weight: bold;
+			margin-top: 0.3rem;
+		}
+	}
+	&__close {
+		position: absolute;
+		top: 1.2rem;
+		right: 1.3rem;
+		font-size: 0;
+		width: 0.9375rem;
+		height: 0.9375rem;
+		cursor: pointer;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0.25rem;
+			left: 0.25rem;
+			display: block;
+			width: 1.3256rem;
+			height: 1.3256rem;
+			border-left: 1px #7a9dfb solid;
+			transform: rotate(45deg);
+			transition: 0.2s all linear;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0.25rem;
+			left: -0.625rem;
+			display: block;
+			width: 1.3256rem;
+			height: 1.3256rem;
+			border-right: 1px #7a9dfb solid;
+			transform: rotate(-45deg);
+			transition: 0.2s all linear;
+		}
+		&:hover {
+			&:before,
+			&:after {
+				border-color: darken(#7a9dfb, 25%);
+			}
+		}
+	}
+	.form__section {
+		width: 22rem;
+		margin: 0 auto 1rem;
+	}
+}
+
+.error-callback-message {
+	text-indent: 30px;
+}

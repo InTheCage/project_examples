@@ -1,0 +1,279 @@
+@import '../../styles/variable.scss';
+
+.date-picker-wrapper {
+	width: 17.35rem;
+	margin: 0 0 0 0.625rem;
+	@media #{$small-only} {
+		margin: 0;
+		width: 100%;
+		max-width: 17.35rem;
+	}
+	> label {
+		display: flex;
+		align-items: center;
+		border: 2px #e0e3ef solid;
+		height: 2.25rem;
+		min-height: 40px;
+		border-radius: 0.9375rem;
+		position: relative;
+	}
+
+	.react-datepicker-wrapper {
+		width: 100%;
+		position: relative;
+		z-index: 5;
+	}
+
+	.calendar-icon {
+		position: absolute;
+		z-index: 5;
+		right: 15px;
+		top: auto;
+		img {
+			width: 24px;
+			height: 24px;
+			max-width: none;
+		}
+	}
+
+	input {
+		font-family: $font-primary;
+		font-size: 1rem;
+		color: #7a9dfb;
+		padding: 0 40px 0 15px;
+		width: 100%;
+		background: transparent;
+		&::placeholder {
+			font-family: $font-primary;
+			font-size: 1rem;
+			color: #504f53;
+			opacity: 1;
+		}
+		&::selection {
+			background: transparent;
+		}
+	}
+
+	.react-date-picker__calendar-button {
+		position: absolute;
+		right: -40px;
+	}
+
+	.date-picker__apply-wrap {
+		text-align: center;
+		button {
+			margin: 0 0 0.75rem;
+			width: 100%;
+			max-width: 14.0625rem;
+			&:first-child {
+				margin-top: 1.1875rem;
+			}
+			&:last-child {
+				margin-bottom: 1.1875rem;
+			}
+		}
+	}
+
+	.custom-popper {
+		.react-datepicker {
+			font-family: $font-primary;
+			background: $white;
+			border: none;
+			border-radius: $rad15;
+			box-shadow: 0px 4px 20px rgba(172, 154, 223, 0.23);
+			border: 2px #e0e3ef solid;
+			margin-top: -41px;
+			margin-left: -2px;
+			padding-top: 3.7rem;
+			.react-datepicker__navigation {
+				top: 3.55rem;
+				.react-datepicker__navigation-icon {
+					&:before {
+						border-color: #7a9dfb;
+						border-width: 1.5px 1.5px 0 0;
+					}
+				}
+			}
+			.react-datepicker__header {
+				padding: 0 0 0.3rem;
+				background-color: $white;
+				border-radius: 0;
+				border-bottom: none;
+				position: relative;
+				&:before {
+					content: "";
+					width: calc(100% - 2.25rem);
+					height: 2px;
+					background-color: #e0e3ef;
+					position: absolute;
+					top: -1.125rem;
+					left: 1.125rem;
+				}
+				.react-datepicker__current-month {
+					font-size: 1.125rem;
+					font-weight: 500;
+					color: #000;
+					text-transform: capitalize;
+				}
+			}
+			.react-datepicker__day-names {
+				margin: 0 0 -10px;
+				padding: 10px 0 0;
+			}
+			.react-datepicker__day {
+				font-size: 0.8125rem;
+			}
+			.react-datepicker__day--today {
+				font-weight: bold;
+				color: $white;
+				background-color: $link-primary;
+				position: relative;
+				border-radius: 50%;
+			}
+			.react-datepicker__month {
+				margin: 0;
+				overflow: hidden;
+			}
+		}
+
+		.react-datepicker__day-name,
+		.react-datepicker__day,
+		.react-datepicker__time-name {
+			width: 2.4375rem;
+			height: 2.4375rem;
+			line-height: 2.4rem;
+			color: #504f53;
+			margin: 0;
+			border-radius: 50%;
+		}
+
+		.react-datepicker__day-name {
+			font-size: 0.75rem;
+			text-transform: capitalize;
+			color: #949494;
+		}
+
+		.react-datepicker__day--outside-month {
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		.react-datepicker__day--in-range {
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: -35%;
+				width: 65%;
+				height: 100%;
+				background-color: #bfd1ff;
+				z-index: 0;
+			}
+		}
+
+		.react-datepicker__day--keyboard-selected,
+		.react-datepicker__day--keyboard-selected.react-datepicker__day--in-range.react-datepicker__day--today {
+			background-color: #bfd1ff;
+			color: $link-primary;
+		}
+
+		.react-datepicker__day--in-selecting-range,
+		.react-datepicker__day--in-selecting-range.react-datepicker__day--today {
+			background-color: #bfd1ff;
+			color: $link-primary;
+		}
+
+		.react-datepicker__day--in-range,
+		.react-datepicker__day--in-range.react-datepicker__day--today {
+			background-color: #bfd1ff;
+			color: $link-primary;
+		}
+
+		.react-datepicker__day--in-range.react-datepicker__day--selecting-range-start.react-datepicker__day--today,
+		.react-datepicker__day--in-range.react-datepicker__day--selecting-range-end.react-datepicker__day--today,
+		.react-datepicker__day--in-range.react-datepicker__day--range-start.react-datepicker__day--today,
+		.react-datepicker__day--in-range.react-datepicker__day--range-end.react-datepicker__day--today {
+			background: $white;
+		}
+
+		.react-datepicker__day--range-start,
+		.react-datepicker__day--range-end,
+		.react-datepicker__day--selecting-range-end,
+		.react-datepicker__day--selecting-range-start {
+			box-shadow: inset 0 0 0 1px $link-primary;
+			font-weight: bold;
+			background-color: $white;
+			color: $link-primary;
+		}
+
+		.react-datepicker__day--range-start,
+		.react-datepicker__day--selecting-range-start,
+		.react-datepicker__day--range-end,
+		.react-datepicker__day--selecting-range-end {
+			border-radius: 50% !important;
+		}
+
+		.react-datepicker__day--in-range,
+		.react-datepicker__day--in-selecting-range,
+		.react-datepicker__day--in-selecting-range.react-datepicker__day--today,
+		.react-datepicker__day--in-range.react-datepicker__day--today {
+			border-radius: 0;
+		}
+
+		.react-datepicker__day--range-start {
+			position: relative;
+			z-index: 1;
+			&:after {
+				display: none;
+			}
+			+ .react-datepicker__day--in-range {
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: -35%;
+					width: 65%;
+					height: 100%;
+					background-color: #bfd1ff;
+					z-index: 0;
+				}
+			}
+		}
+
+		.react-datepicker__day--selecting-range-start {
+			position: relative;
+			z-index: 1;
+			&:after {
+				display: none;
+			}
+			&:before {
+				display: none;
+			}
+			+ .react-datepicker__day--in-selecting-range {
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: -35%;
+					width: 65%;
+					height: 100%;
+					background-color: #bfd1ff;
+					z-index: 0;
+				}
+			}
+		}
+
+		.react-datepicker__day--range-end,
+		.react-datepicker__day--selecting-range-end {
+			&:before {
+				display: none;
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

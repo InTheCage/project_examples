@@ -1,0 +1,18 @@
+@import '../../../styles/variable.scss';
+.title-appointment-page{
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 50%);
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  @media #{$small-only} {
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+    .change-patient-button{
+      margin-top: 20px;
+    }
+  }
+}
+.title-appointment-page__text{
+  display: grid;
+  align-items: start;
+}

@@ -1,0 +1,171 @@
+@import '../../styles/variable.scss';
+
+.appointment-calendar {
+	margin: 0 0 0.6rem;
+	.checkbox-time-calendar {
+		width: calc(100% + 0.625rem);
+		margin-left: -0.3125rem;
+		@media #{$small-only} {
+			width: 100%;
+    		margin-left: 0;
+		}
+		.select-horizontal__input[type='checkbox'],
+		.select-horizontal__input[type='radio'] {
+			& + label {
+				font-size: 0.875rem;
+				background: #f0f4ff;
+				max-width: 13.7rem;
+				min-width: 4.75rem;
+				height: 2.25rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				border-radius: 0.625rem;
+				padding: 0 0.625rem;
+				margin: 0 0.3125rem 0.625rem;
+				@media #{$small-only} {
+					min-width: 23.7vw;
+					padding: 0 3vw;
+					margin: 0 2.3vw .625rem;
+				}
+				&:before,
+				&:after {
+					display: none;
+				}
+				span {
+					font-size: 0.75rem;
+					line-height: 1.2;
+				}
+			}
+		}
+		.select-horizontal__input[type='checkbox']:checked,
+		.select-horizontal__input[type='radio']:checked {
+			& + label {
+				background: #7a9dfb;
+				color: #fff;
+				&:before,
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	.appointment-calendar__no-appointment {
+		border: 1px #f0f4ff solid;
+		border-radius: $rad10;
+		text-align: center;
+		padding: 0.5rem 0.5rem 0.7rem;
+		margin: 0 0 0.9rem;
+		background: rgba(255,255,255,0.8);
+		.subtitle1 {
+			margin: 0 0 0.6rem;
+		}
+		p {
+			margin: 0 0 1.2rem;
+		}
+		.checkbox-time-calendar {
+			.select-horizontal__input[type='checkbox'],
+			.select-horizontal__input[type='radio'] {
+				& + label {
+					font-size: 0.75rem;
+					line-height: 1;
+				}
+			}
+		}
+		.form__group-row {
+			margin: 0 auto;
+		}
+	}
+}
+
+.select-appointment-types {
+	min-height: 130px;
+	.checkbox__options {
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0.8rem -0.3125rem 0.7rem;
+		width: calc(100% + 0.3125rem + 0.3125rem);
+		@media #{$small-only} {
+			margin-bottom: 0.2rem;
+		}
+		.form__group-row {
+			margin: 0 0.3125rem 0.8rem;
+			@media #{$small-only} {
+				width: calc(50% - 0.63rem);
+			}
+		}
+	}
+	.checkbox {
+		.select-horizontal__input[type='checkbox'],
+		.select-horizontal__input[type='radio'] {
+			& + label {
+				width: 8.375rem;
+				height: 100%;
+				font-size: 0.875rem;
+				background: #f0f4ff;
+				border-radius: 0.625rem;
+				padding: 0.75rem 0.45rem 0.5rem;
+				margin: 0;
+				position: relative;
+				@media #{$small-only} {
+					width: 100%;
+				}
+				&:before,
+				&:after {
+					display: none;
+				}
+			}
+		}
+		.select-horizontal__input[type='checkbox']:checked,
+		.select-horizontal__input[type='radio']:checked {
+			& + label {
+				background: #7a9dfb;
+				color: #fff;
+				&:before {
+					position: absolute;
+					top: auto;
+					left: auto;
+					bottom: 0.78rem;
+					right: 0;
+					width: 1.5rem;
+					height: 1.5rem;
+					border: none;
+					background: #fff;
+					border-radius: 50%;
+					display: block;
+				}
+				&:after {
+					display: block;
+					position: absolute;
+					margin-top: 0;
+					top: auto;
+					left: auto;
+					bottom: 1.15rem;
+    				right: 1.05rem;
+					border-radius: 0;
+					width: 0.9375rem;
+					height: 0.9375rem;
+					background: transparent url(../../static/images/icons/check.svg) 0 0 no-repeat;
+					background-size: 0.9375rem;
+				}
+			}
+		}
+		.appointment-doctor {
+			font-size: 0.8125rem;
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+		}
+		.appointment-type {
+			font-size: 0.75rem;
+			font-weight: normal;
+			margin-bottom: 0.5rem;
+		}
+		.appointment-price {
+			font-size: 1rem;
+			font-weight: 500;
+			margin-bottom: 0.5rem;
+			min-height: 1rem;
+		}
+	}
+}

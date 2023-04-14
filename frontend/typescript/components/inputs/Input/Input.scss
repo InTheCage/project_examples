@@ -1,0 +1,69 @@
+@import '../../../styles/variable.scss';
+
+::-webkit-input-placeholder {
+	color: transparent;
+}
+::-moz-placeholder {
+	color: transparent;
+}
+:-moz-placeholder {
+	color: transparent;
+}
+:-ms-input-placeholder {
+	color: transparent;
+}
+
+::placeholder {
+	color: transparent;
+}
+
+.form__section {
+	display: block;
+	position: relative;
+	margin-bottom: 2.6rem;
+	input {
+		font-family: $font-primary;
+		font-size: 0.875rem;
+        letter-spacing: 0.0094rem;
+        color: $primary;
+		width: 100%;
+		height: 2.5rem;
+        border: 2px solid #e0e3ef;
+		border-radius: $rad10;
+        padding: 0 0.75rem;
+		transition: background-color 0.25s ease;
+		&:disabled {
+			+ label {
+				opacity: 0.5;
+			}
+		}
+		& + label {
+			font-family: $font-primary;
+            font-size: 0.875rem;
+            letter-spacing: 0.0094rem;
+            color: $secondary;
+            padding: 0 0.75rem;
+			position: absolute;
+			top: 0.6rem;
+			left: 0;
+			pointer-events: none;
+			transition: all 0.25s linear;
+		}
+
+		&:focus, &:not(:placeholder-shown), &:-webkit-autofill {
+			& + label {
+				font-size: 0.8125rem;		
+				top: -1.4rem;
+			}
+		}
+	}
+}
+
+.input__errors {
+    margin-top: 0.3rem;
+}
+
+.error-message {
+	font-size: 0.75rem;
+	color: $error;
+}
